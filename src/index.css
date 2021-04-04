@@ -1,0 +1,72 @@
+/* ./src/index.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto&display=swap");
+
+:root {
+  --background: #edf2f4;
+  --secondary-background: #8d99ae;
+  --headline: #2b2d42;
+  --subheadline: #777777;
+  --text: #999999;
+  --highlight: #ef233c;
+  --button: #d90429;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  font-family: -apple-system;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: none;
+  display: block;
+  overscroll-behavior-y: none;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--secondary-background);
+  height: 100vh;
+}
+aside {
+  background-color: var(--background);
+}
+.name{
+  font-family: 'fjalla one', sans;
+  color: var(--headline)
+}
+.id{
+  font-family: 'Roboto', sans-serif;
+  color: var(--text)
+}
+.id:hover{
+  color: var(--background);
+}
+.customer{
+  z-index: 2;
+}
+.customer:hover{
+  color: var(--background)
+}
+.customer:hover::before{
+  content: '';
+  display: inline-block;
+  background-color: var(--secondary-background);
+  width: 25%;
+  height: 5rem;
+  /* border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem; */
+  position: fixed;
+  border-radius: 100% 0% 87% 13% / 27% 100% 0% 73%  ;
+  left: 1rem;
+  z-index: -1;
+}
