@@ -40,6 +40,30 @@ body {
 aside {
   background-color: var(--background);
 }
+h1{
+  color: var(--headline);
+  font-family: 'fjalla one', sans;
+}
+label{
+  font-family: 'Roboto', sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  line-height: 1rem;
+}
+form{
+  padding: 40px 50px 20px 50px;
+}
+input{
+  border: none;
+	background-color: var(--headline);
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 1.2px;
+	transition: 0.3s ease background, color;
+	color: white;
+	border-radius: 0;
+  padding: .5rem;
+}
 .name{
   font-family: 'fjalla one', sans;
   color: var(--headline)
@@ -70,3 +94,51 @@ aside {
   left: 1rem;
   z-index: -1;
 }
+/* styling for information blocks */
+
+.block1{
+  background-color: var(--headline);
+  color: var(--text);
+  font-family: 'Roboto', sans-serif;
+  perspective: 1000px;
+}
+.block1inner{
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.front, .back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.front{
+  background-color: var(--headline);
+  color: var(--text);
+}
+.back{
+  background-color: var(--background);
+  color: var(--headline);
+  transform: rotateY(180deg);
+}
+.block1:hover .block1inner {
+  transform: rotateY(180deg);
+}
+.highlight{
+  color: var(--highlight);
+}
+.highlightbg{
+  background-color: var(--highlight);
+}
+.text{
+  color: var(--text);
+}
+.textbg{
+  background-color: var(--text);
+}
+.textalt{
+  color: var(--headline)
+}
+
+

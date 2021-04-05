@@ -1,14 +1,14 @@
 import React from 'react'
-import {Func, Customer, Arr, Str} from '../../Utilities/CustomTypes'
+import {Func, Cust, Arr2, Str} from '../../Utilities/CustomTypes'
 
 
 
-export default function Aside (props: {customers: Arr, setCustomerId: Func, getCustomerId:Func, asyncErr:Str}){
+export default function Aside (props: {customers: Arr2, setCustomerId: Func, getCustomerId:Func, asyncErr:Str}){
     
     const {customers, setCustomerId, getCustomerId, asyncErr} = props
     return (
         <div className='h-50 ma2 flex flex-column justify-between  pa1'>
-            {customers.length >0 ? customers.map((a:Customer, i: number)=>(
+            {customers.length >0 ? customers.map((a:Cust, i: number)=>(
                 <div 
                 key={i} 
                 className='customer flex flex-column justify-center h-100 pointer' 

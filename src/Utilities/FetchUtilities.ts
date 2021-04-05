@@ -43,3 +43,4 @@ export const fetchCustomerRoutes = (customerId: Str, stateFunc: Func, stateErr: 
     stateErr("There seems to be a problem getting data for this customer")
   })
 }
+
