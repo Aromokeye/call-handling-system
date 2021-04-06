@@ -1,5 +1,4 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core"
-import { boolean } from "yup/lib/locale"
 
 export type Arr= Array< Cust | Stats>
 

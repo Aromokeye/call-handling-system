@@ -123,7 +123,7 @@ export function ApplicationEdit (props: {clickEvent:Func, route:string, id: numb
     })
 
     return(
-        <form onSubmit={formik.handleSubmit} className='w-75 flex flex-column justify-around h-100 z-999'>
+        <form onSubmit={formik.handleSubmit} className='w-75 b flex flex-column justify-around h-100 z-999'>
              <label htmlFor='applicationId'>Application Id</label>
            <input
             type='number'
