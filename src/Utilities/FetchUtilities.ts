@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {Str, Func, Obj, Num} from './CustomTypes'
+import {Str, Func, Obj, Num, Appedit} from './CustomTypes'
 
 //this fetches data without parameters
 export const fetchMainRoutes = (routeName:Str, stateFunc: Func, stateErr: Func) =>{
@@ -56,6 +56,19 @@ export const fetchCustomerRoutes = (customerId: Num, stateFunc: Func, stateErr: 
 //post requests
 export const postData = (routeName: Str, data:Obj) =>{
   axios.post(`https://techtestcalllogapi.azurewebsites.net/api/${routeName}`, data)
+  .then(response=> console.log(response))
+  .catch(err=> console.log(err))
+}
+
+//put request
+export const editData = (routeName: Str, comingData: Appedit)=>{
+  const data: object={
+    applicationId: comingData.applicationId,
+    name: comingData.appName,
+    description: comingData.appDescription,
+    hasSupportContract: comingData.appHasSupportContract
+  }
+  axios.put(`https://techtestcalllogapi.azurewebsites.net/api/${routeName}`, data)
   .then(response=> console.log(response))
   .catch(err=> console.log(err))
 }

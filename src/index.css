@@ -46,9 +46,7 @@ h1{
 }
 label{
   font-family: 'Roboto', sans-serif;
-  font-size: medium;
-  font-weight: bold;
-  line-height: 1rem;
+  font-weight:bold;
 }
 form{
   padding: 40px 50px 20px 50px;
@@ -56,7 +54,6 @@ form{
 input{
   border: none;
 	background-color: var(--headline);
-	font-weight: 600;
 	font-size: 14px;
 	letter-spacing: 1.2px;
 	transition: 0.3s ease background, color;
@@ -119,6 +116,7 @@ input[type="checkbox"]:checked {
   perspective: 1000px;
   height: 40vh;
 }
+
 .block1inner{
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -162,6 +160,25 @@ input[type="checkbox"]:checked {
   height: 8rem;
   color: var(--headline);
   font-family: 'Roboto' sans-serif;
+}
+.customername{
+  position: fixed;
+  top: -3rem;
+  right: 0;
+  color: var(--headline);
+}
+.verticaltext{
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+.blockid{
+  color: var(--background)
+}
+.iconsbg{
+  background-color: var(--headline);
+}
+.iconsborder{
+  border-color: var(--highlight);
 }
 
 

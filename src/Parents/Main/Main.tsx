@@ -9,7 +9,7 @@ export default function Main (){
            <Currentinfo
            service={'Application'}
            icons={{header: faDatabase, edit: faEdit, delete: faTrashAlt, create: faPen}}
-           className={`block1 flex justify-center items-center relative shadow-1`}/>
+           className={`block1 flex justify-center items-center relative shadow-4`}/>
         </div>
     )
 }
