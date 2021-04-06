@@ -11,7 +11,7 @@ export const fetchMainRoutes = (routeName:Str, stateFunc: Func, stateErr: Func) 
         const theData: [] | string | object = res.data
         stateFunc(theData)
         stateErr('')
-        console.log(res.status)
+        console.log(res.data)
       })
       .catch(err => {
         stateErr("Aww aww, there's an issue getting data")

@@ -39,6 +39,7 @@ body {
 }
 aside {
   background-color: var(--background);
+  height: 90vh;
 }
 h1{
   color: var(--headline);
@@ -104,6 +105,20 @@ input[type="checkbox"]:checked {
   left: 1rem;
   z-index: -1;
 }
+.cc::before{
+  content: '';
+  display: inline-block;
+  background-color: var(--secondary-background);
+  width: 25%;
+  height: 5rem;
+  /* border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem; */
+  position: fixed;
+  border-radius: 100% 0% 87% 13% / 27% 100% 0% 73%  ;
+  left: 1rem;
+  z-index: -1;
+}
+
 /* styling for information blocks */
 
 .block1{
@@ -112,6 +127,13 @@ input[type="checkbox"]:checked {
   font-family: 'Roboto', sans-serif;
   perspective: 1000px;
   height: 40vh;
+}
+.block2{
+  background-color: var(--text);
+  color: var(--headline);
+  font-family: 'Roboto', sans-serif;
+  perspective: 1000px;
+  height: 50vh;
 }
 
 .block1inner{
@@ -129,7 +151,16 @@ input[type="checkbox"]:checked {
   background-color: var(--headline);
   color: var(--text);
 }
+.front2{
+  background-color: var(--text);
+  color: var(--headline);
+}
 .back{
+  background-color: var(--background);
+  color: var(--headline);
+  transform: rotateY(180deg);
+}
+.back2{
   background-color: var(--background);
   color: var(--headline);
   transform: rotateY(180deg);
@@ -177,7 +208,16 @@ input[type="checkbox"]:checked {
 .iconsborder{
   border-color: var(--highlight);
 }
+.hero{
+  font-family: 'Roboto' sans-serif;
+}
 
-
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+.scroll{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 

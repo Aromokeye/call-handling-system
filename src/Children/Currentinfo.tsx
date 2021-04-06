@@ -47,8 +47,8 @@ export default function Currentinfo (props:
 
     return (
         <div className={`${className} ${rotate && ''}`}>
-            {needed.length > 0 && <h1 className='customername f3 lh-title text'>{needed[0].customer.name}</h1>}
-            <div className={`block1inner relative w-100 h-100 ${rotate && 'rotate'}`}>
+            {needed.length > 0 && service === 'Application'? <h1 className='customername f3 lh-title text'>{needed[0].customer.name}</h1> : null}
+            <div className={`block1inner relative w-100 h-100 shadow-4 ${rotate && 'rotate'}`}>
                 <div className='front'>
                     <div className='absolute top-1 left-1 flex items-center b highlight verticaltext'>
                         <FontAwesomeIcon icon={icons.header} size='2x'/>

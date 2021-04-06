@@ -49,6 +49,23 @@ export type Apptype={
     id:number
     name: string
 }
+export type Calltype={
+    id: number
+    description:{
+        id: number
+        description: string
+    }
+    status:{
+        id: number
+        description: string
+    }
+    customer:{
+        id: number
+        name: string
+    }
+
+}
+export type Callarr = Calltype[]
 export type Apparr=Apptype[]
 
 export type Appedit={
@@ -57,4 +74,7 @@ export type Appedit={
     appDescription: string
     appHasSupportContract: boolean
 }
- 
+export 
+interface ParamTypes {
+    id: string;
+  }

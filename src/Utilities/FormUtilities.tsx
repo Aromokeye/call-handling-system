@@ -36,7 +36,7 @@ export  function Applicationform(props: {clickEvent:Func, route:string}){
     })
     return(
         
-            <form onSubmit={form.handleSubmit} className='w-75 flex flex-column justify-around h-100'>
+            <form onSubmit={form.handleSubmit} className='w-75 flex flex-column justify-around h-100 b'>
             <label htmlFor="Name">Name</label>
             <input
             type='text'
@@ -64,10 +64,10 @@ export  function Applicationform(props: {clickEvent:Func, route:string}){
             {form.touched.description && form.errors.description ?
             <div className='highlight b f6'>{form.errors.description}</div>: null}
 
-            <label className='flex items-center'>
+            <label className=''>
              <input
                type="checkbox"
-               className='w1 h1 mr1 mv1 textaltbg'
+               className='w1 h1 mr1 mv1'
                name="hasSupportContract"
                checked={form.values.hasSupportContract}
                onChange={form.handleChange}
@@ -123,7 +123,7 @@ export function ApplicationEdit (props: {clickEvent:Func, route:string, id: numb
     })
 
     return(
-        <form onSubmit={formik.handleSubmit} className='w-75 b flex flex-column justify-around h-100 z-999'>
+        <form onSubmit={formik.handleSubmit} className='w-75 b flex flex-column justify-around h-100 b'>
              <label htmlFor='applicationId'>Application Id</label>
            <input
             type='number'
@@ -148,7 +148,7 @@ export function ApplicationEdit (props: {clickEvent:Func, route:string, id: numb
             {formik.touched.appName && formik.errors.appName ?
             <div className='highlight b f6'>{formik.errors.appName}</div>: null}
 
-            <label className='flex items-center'>
+            <label className=''>
             <input
             type="checkbox"
             className='w1 h1 mr1 mv1'
