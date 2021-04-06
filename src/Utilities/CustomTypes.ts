@@ -1,12 +1,12 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core"
 
-export type Arr= Array< object | string | [] | number| Cust>
+export type Arr= Array< Cust | Stats>
 
 export type Arr2=[]
 
 export type Str = string
 
-export type Num = Number
+export type Num = number
 
 export type Func = Function
 
@@ -30,3 +30,23 @@ export interface ApplicationData{
     hasSupportContract: boolean,
     customerId: number
 }
+
+export type Stats={
+    id: number
+    description?:string
+}
+
+export interface Fetched{
+    id: number,
+    data: []
+}
+
+export type Apptype={
+    description: string
+    installationDate: string
+    hasSupportContract: boolean
+    customer: Cust
+    id:number
+    name: string
+}
+export type Apparr=Apptype[]

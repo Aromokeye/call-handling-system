@@ -1,5 +1,5 @@
 import {createContext} from 'react'
-import {Arr} from '../Utilities/CustomTypes'
+import {Fetched} from '../Utilities/CustomTypes'
 
-export const CurrentCustomerContext = createContext([] as Arr)
+export const CurrentCustomerContext = createContext<Fetched>({id: 0, data:[]})
 

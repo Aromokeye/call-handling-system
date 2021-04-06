@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import {fetchCustomerRoutes, fetchMainRoutes} from './Utilities/FetchUtilities'
 import {getCustomerId} from './Utilities/EventUtilities'
-import {Arr, Arr2, Str} from './Utilities/CustomTypes'
+import {Arr2, Str, Num, Fetched} from './Utilities/CustomTypes'
 import Main from './Parents/Main/Main'
 import Aside from './Parents/Aside/Aside'
 import {CurrentCustomerContext} from './Context/CustomerContext'
@@ -11,8 +11,8 @@ import {CurrentCustomerContext} from './Context/CustomerContext'
 function App() {
   const [customers, setCustomers] = useState<Arr2>([])
   const [asyncErr, setAsynErr] = useState <Str>('')
-  const [customerId, setCustomerId] = useState<Str>('')
-  const [customerData, setCustomerData] = useState<Arr>([])
+  const [customerId, setCustomerId] = useState<Num>(0)
+  const [customerData, setCustomerData] = useState<Fetched>({id:0, data:[]})
 
   useEffect(()=>{
     fetchMainRoutes('Customer', setCustomers, setAsynErr)
