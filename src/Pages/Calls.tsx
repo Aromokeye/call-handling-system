@@ -56,11 +56,12 @@ export default function Call(props:{ icons: Icons, }){
                                 {console.log(error)}
                         </ul>  
                     </div>
-                    <div className='flex flex-row justify-between w-100'>
-                        <div className='sel1 f6 lh-copy'>Open</div>
-                        <div className='sel2 f6 lh-copy'>Close</div>
-                        <div className='sel3 f6 lh-copy'>Re-Opened</div>
-                        <div className='sel4 f6 lh-copy'></div>
+                    <div className='flex flex-row justify-center center w-60  h-50'>
+                        <h1 className='f3 mr2'>Sort:</h1>
+                        <div className='sel2 br3 f5 lh-copy items-center flex justify-center w4 pa2 ma1 tc b pointer'>Open</div>
+                        <div className='sel1 br3 f6 lh-copy items-center flex justify-center w4 pa2 ma1 tc b pointer'>Close</div>
+                        <div className='sel3 br3 f6 lh-copy items-center flex justify-center w4 pa2 ma1 tc b pointer'>Re-Opened</div>
+                        <div className='sel4 br3 f6 lh-copy items-center flex justify-center w4 pa2 ma1 tc b pointer'>AwaitingCustomer</div>
                     </div>
                 </div>
             </div>
