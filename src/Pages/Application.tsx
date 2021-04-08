@@ -64,7 +64,7 @@ export default function Applications (props:
                                        <div key={i} className='w-30 textaltbg pa3 ma2 f5 measure b br3 relative'>
                                         <div className='flex justify-around absolute top-1 right-1 highlight'>
                                             <button 
-                                            className='iconsbg h2 w2 br-100 flex justify-center items-center mh1 bn highlight'
+                                            className='iconsbg h2 w2 br-100 flex justify-center items-center mh1 bn highlight pointer'
                                             onClick={()=> doRotate2(data.id, data.name, data.description, data.hasSupportContract)}
                                             >
                                                 <FontAwesomeIcon icon={icons.edit} /> 
@@ -83,7 +83,7 @@ export default function Applications (props:
                     </div>
                 
                     <button className='flex items-center flex-column absolute shadow-3 highlightbg text iconsbg
-                    bottom-1 left-1 b pa1 grow-large w3 h3 br-100 ba bw1' onClick={doRotate}>
+                    bottom-1 left-1 b pa1 grow-large w3 h3 br-100 ba bw1 pointer' onClick={doRotate}>
                         <div 
                         className=' 
                         flex justify-center items-center'>

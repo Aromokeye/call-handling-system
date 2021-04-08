@@ -122,7 +122,7 @@ export default function Statistics (){
                         </div>
                     )} 
                 </div>
-
+                            {console.log(error)}
                 <div className='w-90 ma1'>
                     {stats?.customer?.id > 0 && (
                         <div className='flex flex-column justify-center blockId br4 ba bw1 w-90 vh-25 pa1 callsh'>
