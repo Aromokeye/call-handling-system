@@ -10,6 +10,7 @@ export default function Call(props:{ icons: Icons, }){
     const [error, setError] =useState<Str>('')
     const [needed, setneeded] = useState<Callarr>([])
     const [routeData, setRouteData] = useState<Callarr>([])
+    const [filter, setFilter] = useState('')
 
     useEffect(()=>{
         fetchMainRoutes('Call', setRouteData, setError)
@@ -18,12 +19,18 @@ export default function Call(props:{ icons: Icons, }){
     let currentCustomer = useContext(CurrentCustomerContext)
 
     useEffect(()=>{
-        if(routeData.length > 0){
-            setneeded(routeData.filter(a=> a.customer.id === currentCustomer.id))
+        if(routeData.length > 0 && filter !== ''){
+            setneeded(routeData.filter(a=> a.customer.id === currentCustomer.id && a.status.description === filter))
+        }else{
+            if(routeData.length > 0){
+                setneeded(routeData.filter(a=> a.customer.id === currentCustomer.id))
+            }
         }
-    }, [routeData, currentCustomer.id])
+    }, [routeData, currentCustomer.id, filter])
 
-   
+   const getFilter = (data: string) =>{
+       setFilter(data)
+   }
 
 
     return(
@@ -57,11 +64,33 @@ export default function Call(props:{ icons: Icons, }){
                         </ul>  
                     </div>
                     <div className='flex flex-row justify-center center w-60  h-50'>
-                        <h1 className='f3 mr2'>Sort:</h1>
-                        <div className='sel2 br3 f5 lh-copy items-center flex justify-center w4 pa2 ma1 tc b pointer'>Open</div>
-                        <div className='sel1 br3 f6 lh-copy items-center flex justify-center w4 pa2 ma1 tc b pointer'>Close</div>
-                        <div className='sel3 br3 f6 lh-copy items-center flex justify-center w4 pa2 ma1 tc b pointer'>Re-Opened</div>
-                        <div className='sel4 br3 f6 lh-copy items-center flex justify-center w4 pa2 ma1 tc b pointer'>AwaitingCustomer</div>
+                        <h1 className='f3 mr2'>Filter:</h1>
+                        <div 
+                        className='sel2 br3 f5 lh-copy items-center flex justify-center w4 pa2 ma1 tc b pointer'
+                        onClick= {()=> getFilter('Open')}
+                        >
+                            Open
+                        </div>
+                        <div className='sel1 br3 f6 lh-copy items-center flex justify-center w4 pa2 ma1 tc b pointer'
+                        onClick= {()=> getFilter('Closed')}
+                        >
+                            Close
+                        </div>
+                        <div className='sel3 br3 f6 lh-copy items-center flex justify-center w4 pa2 ma1 tc b pointer'
+                        onClick= {()=> getFilter('Re-Opened')}
+                        >
+                            Re-Opened
+                        </div>
+                        <div className='sel4 br3 f6 lh-copy items-center flex justify-center w4 pa2 ma1 tc b pointer'
+                        onClick= {()=> getFilter('AwaitingCustomer')}
+                        >
+                            AwaitingCustomer
+                        </div>
+                        <div className='br3 f6 lh-copy iconsbg text items-center flex justify-center w4 pa2 ma1 tc b pointer'
+                        onClick= {()=> getFilter('')}
+                        >
+                            Remove Filter
+                        </div>
                     </div>
                 </div>
             </div>
