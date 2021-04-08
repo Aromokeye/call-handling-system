@@ -11,7 +11,7 @@ export const fetchMainRoutes = (routeName:Str, stateFunc: Func, stateErr: Func) 
         const theData: [] | string | object = res.data
         stateFunc(theData)
         stateErr('')
-        console.log(res.data)
+        console.log(res.status)
       })
       .catch(err => {
         stateErr("Aww aww, there's an issue getting data")
@@ -41,7 +41,7 @@ export const fetchCustomerRoutes = (customerId: Num, stateFunc: Func, stateErr: 
             const status = response[3].data
 
             const results = [application, call, statistics, status]
-            console.log(results)
+            
             stateFunc({id:customerId, data:results})
             stateErr('')
         })
@@ -56,7 +56,7 @@ export const fetchCustomerRoutes = (customerId: Num, stateFunc: Func, stateErr: 
 //post requests
 export const postData = (routeName: Str, data:Obj) =>{
   axios.post(`https://techtestcalllogapi.azurewebsites.net/api/${routeName}`, data)
-  .then(response=> console.log(response))
+  .then(response=> console.log(response.status))
   .catch(err=> console.log(err))
 }
 
@@ -69,14 +69,20 @@ export const editData = (routeName: Str, comingData: Appedit)=>{
     hasSupportContract: comingData.appHasSupportContract
   }
   axios.put(`https://techtestcalllogapi.azurewebsites.net/api/${routeName}`, data)
-  .then(response=> console.log(response))
+  .then(response=> console.log(response.status))
   .catch(err=> console.log(err))
 }
 
 export const patchCall = (data: Callpatch) =>{
   axios.patch(`https://techtestcalllogapi.azurewebsites.net/api/Call`, data)
-    .then(response=> console.log(response))
+    .then(response=> console.log(response.status))
     .catch(err=> console.log(err))
+}
+
+export const singleFetch = (id: number, stateFunc: Func, stateErr: Func) =>{
+  axios.get(`https://techtestcalllogapi.azurewebsites.net/api/Statistics/${id}`)
+    .then(response=> stateFunc(response.data))
+    .catch(err=> stateErr(err))
 }
 
 

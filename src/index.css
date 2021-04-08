@@ -154,6 +154,13 @@ a{
   perspective: 1000px;
   height: 80vh;
 }
+.block3{
+  background-color: var(--background);
+  color: var(--headline);
+  font-family: 'Roboto', sans-serif;
+  perspective: 1000px;
+  height: 78vh;
+}
 
 .block1inner{
   transition: transform 0.8s;
@@ -262,10 +269,10 @@ a{
   flex-basis: 30%;
 }
 .tablecol2{
-  flex-basis: 30%;
+  flex-basis: 40%;
 }
 .tablecol3{
-  flex-basis: 40%;
+  flex-basis: 30%;
 }
 
 .calllist{
@@ -303,4 +310,10 @@ select::-ms-expand {
 .sel4{
   background-color: lightyellow;
 }
+.callsh{
+  min-height: 4rem;
+}
 
+.call{
+  flex-basis:auto;
+}

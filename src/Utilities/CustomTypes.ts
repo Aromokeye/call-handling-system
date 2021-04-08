@@ -80,7 +80,29 @@ export type Appedit={
     appDescription: string
     appHasSupportContract: boolean
 }
-export 
-interface ParamTypes {
+export interface ParamTypes {
     id: string;
   }
+
+export type StatTypes={
+    id: number
+    openCalls: {
+        totalCalls: number
+        responded:number
+        awaitingResponse: number
+    }
+    closedCalls:{
+        totalCalls: number
+        satisfactory: number
+        unsatisfactory: number
+    }
+    lastThreeMonths:{
+        month1: number
+        month2: number
+        month3: number
+    }
+    customer:{
+        id: number
+        name: string
+    }
+}
