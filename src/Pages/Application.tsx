@@ -5,7 +5,7 @@ import {ApplicationEdit, Applicationform} from '../Utilities/FormUtilities'
 import { fetchMainRoutes } from '../Utilities/FetchUtilities'
 import {CurrentCustomerContext} from '../Context/CustomerContext'
 
-export default function Currentinfo (props: 
+export default function Applications (props: 
     {service:Str,
     className:Str, icons: Icons,
     }){
@@ -47,15 +47,15 @@ export default function Currentinfo (props:
 
     return (
         <div className={`${className} ${rotate && ''}`}>
-            {needed.length > 0 && service === 'Application'? <h1 className='customername f3 lh-title text'>{needed[0].customer.name}</h1> : null}
-            <div className={`block1inner relative w-100 h-100 shadow-4 ${rotate && 'rotate'}`}>
+            {needed.length > 0 && service === 'Application'? <h1 className='customername f3 lh-title'>{needed[0].customer.name}</h1> : null}
+            <div className={`block1inner relative w-100 h-100 shadow-4 br4 ${rotate && 'rotate'}`}>
                 <div className='front'>
                     <div className='absolute top-1 left-1 flex items-center b highlight verticaltext'>
                         <FontAwesomeIcon icon={icons.header} size='2x'/>
                         <div className='f6 measure lh-title mt2 text flex'>{service}</div>
                     </div>
                   
-                    <div className={`${rotate ? 'dn' : 'flex w-90 h-100 flex-wrap center justify-center items-center pa3 overflow-y-auto'}`}>
+                    <div className={`${rotate ? 'dn' : 'flex w-100 flex-wrap center justify-center items-start pa3 overflow-y-auto scroll'}`}>
                         
                         {needed.length > 0 && service === 'Application'
                         ?   (
@@ -83,7 +83,7 @@ export default function Currentinfo (props:
                     </div>
                 
                     <button className='flex items-center flex-column absolute shadow-3 highlightbg text iconsbg
-                    bottom-1 left-1 b pa1 grow-large w3 h3 br-100 ba' onClick={doRotate}>
+                    bottom-1 left-1 b pa1 grow-large w3 h3 br-100 ba bw1' onClick={doRotate}>
                         <div 
                         className=' 
                         flex justify-center items-center'>

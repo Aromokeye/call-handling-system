@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router'
-import {Func, Cust, Arr2, Str} from '../../Utilities/CustomTypes'
+import {Func, Cust, Arr2, Str} from '../Utilities/CustomTypes'
 
 
 
@@ -12,15 +12,15 @@ export default function Aside (props: {customers: Arr2, setCustomerId: Func, get
     
     const {customers, setCustomerId, getCustomerId, asyncErr} = props
     return (
-        <div className='vh-50 ma2 flex flex-column justify-between  pa1'>
+        <div className='h-50 pa3 flex justify-center flex-column br4'>
             {customers.length >0 ? customers.map((a:Cust, i: number)=>(
                 <div 
                 key={i} 
-                className={`customer flex flex-column justify-center h-100 pointer`} 
+                className={`customer flex flex-column justify-center h-75 pointer`} 
                 onClick={()=> {
                     getCustomerId(setCustomerId, a.id)
-                    let id=a.id
-                    history.push(`/${id}`)
+                    
+                    history.push(`/statistics`)
                 }}>
                     <div className='flex id'>
                         <div className='f5 measure lh-copy ttu'>Customer ID:</div>

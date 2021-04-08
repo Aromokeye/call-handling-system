@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {Str, Func, Obj, Num, Appedit} from './CustomTypes'
+import {Str, Func, Obj, Num, Appedit, Callpatch} from './CustomTypes'
 
 //this fetches data without parameters
 export const fetchMainRoutes = (routeName:Str, stateFunc: Func, stateErr: Func) =>{
@@ -71,6 +71,12 @@ export const editData = (routeName: Str, comingData: Appedit)=>{
   axios.put(`https://techtestcalllogapi.azurewebsites.net/api/${routeName}`, data)
   .then(response=> console.log(response))
   .catch(err=> console.log(err))
+}
+
+export const patchCall = (data: Callpatch) =>{
+  axios.patch(`https://techtestcalllogapi.azurewebsites.net/api/Call`, data)
+    .then(response=> console.log(response))
+    .catch(err=> console.log(err))
 }
 
 

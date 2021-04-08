@@ -51,9 +51,10 @@ export type Apptype={
 }
 export type Calltype={
     id: number
-    description:{
+    description: string
+    application:{
         id: number
-        description: string
+        name: string
     }
     status:{
         id: number
@@ -67,6 +68,11 @@ export type Calltype={
 }
 export type Callarr = Calltype[]
 export type Apparr=Apptype[]
+
+export type Callpatch={
+    callId: number
+    status: number
+}
 
 export type Appedit={
     applicationId: number
