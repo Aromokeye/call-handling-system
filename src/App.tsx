@@ -10,7 +10,7 @@ import {Route, Switch, Link, useLocation} from 'react-router-dom'
 import {faDatabase, faEdit, faPen, faTrashAlt, faPhoneSquare} from '@fortawesome/free-solid-svg-icons'
 import Applications from './Pages/Application'
 import Calls from './Pages/Calls'
-import Statistics from './Pages/Statistics';
+import { Stats } from './Pages/Stats';
 
 
 function App() {
@@ -69,7 +69,7 @@ function App() {
             ): <div className='flex justify-center items-center f3 textalt h-100 b'>Please click on a customer to view records</div>}
             {customerId > 0 ? (
               <Route path='/statistics'>
-                <Statistics/>
+               <Stats/>
               </Route>
             ) : <div className='flex justify-center items-center f3 textalt h-100 b'>Please click on a customer to view records</div>}
             {customerId > 0 ? (
