@@ -55,7 +55,7 @@ export default function Applications (props:
                         <div className='f6 measure lh-title mt2 text flex'>{service}</div>
                     </div>
                   
-                    <div className={`${rotate ? 'dn' : 'flex w-100 flex-wrap center justify-center items-start pa3 overflow-y-auto scroll'}`}>
+                    <div className={`${rotate ? 'dn' : 'flex w-100 flex-wrap center justify-center items-start pa3 overflow-y-auto h-100 scroll'}`}>
                         
                         {needed.length > 0 && service === 'Application'
                         ?   (
