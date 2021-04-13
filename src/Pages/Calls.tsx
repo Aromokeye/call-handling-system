@@ -34,7 +34,7 @@ export default function Call(props:{ icons: Icons, }){
 
 
     return(
-        <div  className={`block2 w-90 flex justify-center items-center relative shadow-4 mt3 br4`}>
+        <div  className={`block2 w-90-l w-100 flex justify-center items-center relative shadow-4 br4`}>
             {needed.length > 0 ? <h1 className='customername f3 lh-title'>{needed[0].customer.name}</h1> : null}
             <div className={`block1inner relative w-100 h-100 shadow-4 br4 `}>
                 <div className='front2'>
@@ -84,7 +84,7 @@ export default function Call(props:{ icons: Icons, }){
                         <div className='sel4 br3 f6 lh-copy items-center flex justify-center w4 pa2 ma1 tc b pointer'
                         onClick= {()=> getFilter('AwaitingCustomer')}
                         >
-                            AwaitingCustomer
+                            Awaiting Customer
                         </div>
                         <div className='br3 f6 lh-copy iconsbg text items-center flex justify-center w4 pa2 ma1 tc b pointer'
                         onClick= {()=> getFilter('')}

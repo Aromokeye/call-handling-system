@@ -54,14 +54,14 @@ export default function Applications (props:
                         <FontAwesomeIcon icon={icons.header} size='2x'/>
                         <div className='f6 measure lh-title mt2 text flex'>{service}</div>
                     </div>
-                  
-                    <div className={`${rotate ? 'dn' : 'flex w-100 flex-wrap center justify-center items-start pa3 overflow-y-auto h-100 scroll'}`}>
+                  <div className='scroll'>
+                    <div className={`${rotate ? 'dn' : 'flex w-100 flex-wrap center justify-center items-start pa3-l'}`}>
                         
                         {needed.length > 0 && service === 'Application'
                         ?   (
                                needed.map((data, i)=>{
                                    return (
-                                       <div key={i} className='w-30 textaltbg pa3 ma2 f5 measure b br3 relative'>
+                                       <div key={i} className='w-30-l w-40-m w-100 textaltbg pa3 ma2 f5 measure b br3 relative'>
                                         <div className='flex justify-around absolute top-1 right-1 highlight'>
                                             <button 
                                             className='iconsbg h2 w2 br-100 flex justify-center items-center mh1 bn highlight pointer'
@@ -81,7 +81,7 @@ export default function Applications (props:
                             )
                         : <div>Customer has no records for {service}</div> || <div>{error}</div>} 
                     </div>
-                
+                    </div>
                     <button className='flex items-center flex-column absolute shadow-3 highlightbg text iconsbg
                     bottom-1 left-1 b pa1 grow-large w3 h3 br-100 ba bw1 pointer' onClick={doRotate}>
                         <div 

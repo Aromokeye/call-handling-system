@@ -105,11 +105,11 @@ export function Stats () {
 
 
     return (
-        <div className='block3 w-90 flex justify-around flex-column shadow-4 mt3 br4 relative'>
+        <div className='block3 w-90-l w-100 flex justify-around flex-column shadow-4 br4 relative'>
           {stats?.customer?.id > 0 ? <h1 className='customername f3 lh-title'>{stats.customer.name}</h1> : null}
           <div className='h-100'>
             
-                <div className='callline w-60 center h-50'>
+                <div className='callline w-60 w-80-m center h-50'>
                     {
                         stats?.customer?.id > 0 && (
                             <>

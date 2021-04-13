@@ -41,7 +41,7 @@ export default function Statistics (){
     const history = useHistory()
     return (
 
-        <div className='block3 w-90 flex justify-around flex-row  relative shadow-4 mt3 br4 relative'>
+        <div className='block2 w-90 flex justify-around flex-row  relative shadow-4 br4 relative'>
                 <div className='w-30 flex-column'>
                 {stats?.customer?.id > 0 && (
                     <div className='br4 w-30 vh-25 flex flex-row justify-between items-center textbg pa2 absolute top-0 left-0 ma1'>
