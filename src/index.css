@@ -237,6 +237,7 @@ a{
   top: -3.2rem;
   right: 1.5rem;
   color: var(--headline);
+  max-width: 30em;
 }
 .verticaltext{
   writing-mode: vertical-rl;
@@ -307,7 +308,7 @@ select{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url('./Assets/phone.svg') 90% / 15% no-repeat;
+  background: url('./Assets/phone.svg') 97% / 12% no-repeat;
 }
 select::-ms-expand { 
   display: none; /* remove default arrow on ie10 and ie11 */
@@ -342,5 +343,22 @@ select::-ms-expand {
   .aside {
     height: 100%;
   }
+  .customername{
+    top: -4rem;
+    max-width: 20em;
+  }
 }
 /* TABLET RESPONSIVENESS */
+
+@media screen and (max-width: 30em){
+  .customername{
+    top: -4rem;
+    max-width: 20em;
+  }
+  .calllist{
+    height: 75vh;
+  }
+  .applist{
+    height: 80vh;
+  }
+}

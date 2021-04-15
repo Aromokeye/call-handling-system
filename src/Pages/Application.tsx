@@ -47,24 +47,24 @@ export default function Applications (props:
 
     return (
         <div className={`${className} ${rotate && ''}`}>
-            {needed.length > 0 && service === 'Application'? <h1 className='customername f3 lh-title'>{needed[0].customer.name}</h1> : null}
-            <div className={`block1inner relative w-100 h-100 shadow-4 br4 ${rotate && 'rotate'}`}>
+            {needed.length > 0 && service === 'Application'? <h1 className='customername f3-ns f5 lh-title'>{needed[0].customer.name}</h1> : null}
+            <div className={`block1inner relative w-100 h-100 shadow-4 br4-ns mt0-ns ${rotate && 'rotate'}`}>
                 <div className='front'>
-                    <div className='absolute top-1 left-1 flex items-center b highlight verticaltext'>
+                    <div className='absolute-ns dn top-1 left-1 flex-ns items-center b highlight verticaltext'>
                         <FontAwesomeIcon icon={icons.header} size='2x'/>
                         <div className='f6 measure lh-title mt2 text flex'>{service}</div>
                     </div>
                   <div className='scroll'>
-                    <div className={`${rotate ? 'dn' : 'flex w-100 flex-wrap center justify-center items-start pa3-l'}`}>
+                    <div className={`${rotate ? 'dn' : 'flex w-100 flex-wrap center justify-center items-start pa4-l'}`}>
                         
                         {needed.length > 0 && service === 'Application'
                         ?   (
                                needed.map((data, i)=>{
                                    return (
-                                       <div key={i} className='w-30-l w-40-m w-100 textaltbg pa3 ma2 f5 measure b br3 relative'>
+                                       <div key={i} className='w-30-l w-40-m w-90 textaltbg pa3 ma2 f5 measure b br3 relative'>
                                         <div className='flex justify-around absolute top-1 right-1 highlight'>
                                             <button 
-                                            className='iconsbg h2 w2 br-100 flex justify-center items-center mh1 bn highlight pointer'
+                                            className='iconsbg h2 w2 br-100 v-mid tc pa1 mh1 bn highlight pointer'
                                             onClick={()=> doRotate2(data.id, data.name, data.description, data.hasSupportContract)}
                                             >
                                                 <FontAwesomeIcon icon={icons.edit} /> 

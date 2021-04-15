@@ -221,11 +221,11 @@ export function DoSelected (props: {needed: Calltype}){
         }
     )
     return (
-        <form onSubmit={callForm.handleSubmit} className='formselect flex justify-start'>
+        <form onSubmit={callForm.handleSubmit} className='formselect flex justify-start mw-none-ns mw-100'>
             <select value={callForm.values.select} 
             onChange={callForm.handleChange} 
             onBlur={callForm.handleBlur} 
-            className={`h2 ${doColor()}`}
+            className={`h2 f6 mw4 mw-none-ns ${doColor()}`}
             name={'select'}
             >
                 <option>Open</option>
@@ -234,7 +234,7 @@ export function DoSelected (props: {needed: Calltype}){
                 <option>AwaitingCustomer</option>
             </select>
             <button type='submit' 
-            className={`w2 h2 br-100 flex flex-row bn justify-center items-center iconsbg ml1 pointer`}>
+            className={`w2 h2 br-100 bn iconsbg ml1 pointer tc v-mid pa1`}>
                 <FontAwesomeIcon icon={faClipboardCheck}/>
             </button>
         </form>

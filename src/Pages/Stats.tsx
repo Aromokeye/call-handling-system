@@ -106,10 +106,10 @@ export function Stats () {
 
     return (
         <div className='block3 w-90-l w-100 flex justify-around flex-column shadow-4 br4 relative'>
-          {stats?.customer?.id > 0 ? <h1 className='customername f3 lh-title'>{stats.customer.name}</h1> : null}
+          {stats?.customer?.id > 0 ? <h1 className='customername f3-ns f5 lh-title'>{stats.customer.name}</h1> : null}
           <div className='h-100'>
             
-                <div className='callline w-60 w-80-m center h-50'>
+                <div className='callline w-80-m w-60-l w-90 center'>
                     {
                         stats?.customer?.id > 0 && (
                             <>
@@ -118,8 +118,8 @@ export function Stats () {
                         )
                     }
                 </div>
-                <div className='w-100 h-60 flex flex-row justify-center'>
-                  <div className='w-50 flex flex-column items-center'>
+                <div className='w-100 h-60-ns flex flex-row-ns flex-column justify-center items-center'>
+                  <div className='w-80 flex flex-column items-center'>
                     {stats?.customer?.id > 0 && (
                       <>
                         <PolarArea data={openCalls} type='polarArea' />
@@ -127,7 +127,7 @@ export function Stats () {
                       </>
                     )}
                   </div>
-                  <div className='w-50 flex flex-column items-center'>
+                  <div className='w-80 flex flex-column items-center'>
                     {stats?.customer?.id > 0 && (
                       <>
                         <PolarArea data={closedCalls} type='polarArea' />
